@@ -4,11 +4,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/members")
+@RequestMapping("/orders")
 @RestController
-public class MemberController {
+public class OrderController {
 
-    @GetMapping("/test")
+    @GetMapping("/list")
     public String test() {
         return "Hello!";
     }
