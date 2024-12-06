@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ORDER-SERVICE
+    name: order-service
 
 # Eureka
 eureka:
@@ -11,6 +11,6 @@ eureka:
     hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://localhost:8088/eureka
+      defaultZone: ${EUREKA_URL:http://localhost:8088/eureka/}
     register-with-eureka: true
     fetch-registry: true

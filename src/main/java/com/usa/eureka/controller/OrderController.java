@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/orders")
 @RestController
 public class OrderController {
 
@@ -13,8 +12,8 @@ public class OrderController {
         return "Hello!";
     }
 
-    @GetMapping("/actutest")
-    public String actutest() {
-        return "actutest!";
+    @GetMapping("/one")
+    public String getOne() {
+        return "rand!";
     }
 }
