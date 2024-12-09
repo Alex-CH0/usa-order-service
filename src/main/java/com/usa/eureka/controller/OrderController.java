@@ -9,7 +9,7 @@ public class OrderController {
 
     @GetMapping("/list")
     public String test() {
-        return "Hello!";
+        return "Order list : []!";
     }
 
     @GetMapping("/one")
