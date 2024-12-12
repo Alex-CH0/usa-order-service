@@ -36,15 +36,18 @@ public class OrderController {
     }
 
     @PostMapping("/order")
-    public ResponseEntity<Order> createOrder(@RequestBody Order order) {
+    public ResponseEntity<OrderDto> createOrder(@RequestBody Order order) {
         log.info("order test -> {}", order.toString());
 
         ModelMapper mapper = new ModelMapper();
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 
-        kafkaProducer.send("order-user-topic", mapper.map(order, OrderDto.class));
+        OrderDto orderDto = mapper.map(order, OrderDto.class);
+        log.info("orderDto test -> {}", orderDto.toString());
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(order);
+        kafkaProducer.send("order-user-topic", orderDto);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(orderDto);
 
     }
 }

@@ -15,7 +15,7 @@ public class KafkaProducer {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 
-    public OrderDto send(String topic, OrderDto orderDto) {
+    public void send(String topic, OrderDto orderDto) {
         ObjectMapper mapper = new ObjectMapper();
         String jsonString = "";
 
@@ -29,7 +29,6 @@ public class KafkaProducer {
 
         log.info("Kafka producer sent data from Order MS: {}", jsonString);
 
-        return orderDto;
     }
 
 }

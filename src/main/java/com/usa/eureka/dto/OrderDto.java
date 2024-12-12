@@ -1,11 +1,12 @@
 package com.usa.eureka.dto;
 
 import com.usa.eureka.domain.Order;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-@Getter
+@Data
 public class OrderDto {
 
     private String email;
