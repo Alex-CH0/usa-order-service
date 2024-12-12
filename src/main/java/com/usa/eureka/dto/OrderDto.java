@@ -2,14 +2,16 @@ package com.usa.eureka.dto;
 
 import com.usa.eureka.domain.Order;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Getter
 public class OrderDto {
 
-    private final String email;
-    private final Long amount;
+    private String email;
+    private Long amount;
 
-    public OrderDto(Order order){
+    public OrderDto(Order order) {
         this.email = order.getEmail();
         this.amount = order.getAmount();
     }
