@@ -45,7 +45,7 @@ public class OrderController {
         OrderDto orderDto = mapper.map(order, OrderDto.class);
         log.info("orderDto test -> {}", orderDto.toString());
 
-        kafkaProducer.send("order-user-topic", orderDto);
+        kafkaProducer.send("order", orderDto);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(orderDto);
 
