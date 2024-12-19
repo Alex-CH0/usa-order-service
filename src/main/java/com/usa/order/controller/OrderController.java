@@ -1,14 +1,13 @@
-package com.usa.eureka.controller;
+package com.usa.order.controller;
 
-import com.usa.eureka.domain.Order;
-import com.usa.eureka.dto.OrderDto;
-import com.usa.eureka.kafka.KafkaProducer;
+import com.usa.order.domain.Order;
+import com.usa.order.dto.OrderDto;
+import com.usa.order.kafka.KafkaProducer;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
-import org.modelmapper.spi.MatchingStrategy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

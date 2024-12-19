@@ -1,4 +1,4 @@
-package com.usa.eureka.domain;
+package com.usa.order.domain;
 
 import lombok.AccessLevel;
 import lombok.Data;

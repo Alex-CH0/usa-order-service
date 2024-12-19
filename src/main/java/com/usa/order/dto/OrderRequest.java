@@ -1,4 +1,4 @@
-package com.usa.eureka.dto;
+package com.usa.order.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

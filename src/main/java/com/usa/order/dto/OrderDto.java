@@ -1,8 +1,7 @@
-package com.usa.eureka.dto;
+package com.usa.order.dto;
 
-import com.usa.eureka.domain.Order;
+import com.usa.order.domain.Order;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
